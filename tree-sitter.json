@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "vessel",
+      "camelcase": "Vessel",
+      "title": "Vessel",
+      "scope": "source.vessel",
+      "file-types": [
+        "vzl"
+      ],
+      "injection-regex": "^vessel$",
+      "class-name": "TreeSitterVessel"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Programming language targeting Juno: New Origins",
+    "authors": [
+      {
+        "name": "Ryder Retzlaff",
+        "email": "ryder@retzlaff.family"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/zshzebra/tree-sitter-vessel"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
