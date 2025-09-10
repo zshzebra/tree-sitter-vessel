@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-vessel
-        VERSION "0.1.1"
+        VERSION "0.1.2"
         DESCRIPTION "Programming language targeting Juno: New Origins"
         HOMEPAGE_URL "https://github.com/zshzebra/tree-sitter-vessel"
         LANGUAGES C)

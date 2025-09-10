@@ -32,7 +32,6 @@ module.exports = grammar({
     _declaration: $ => choice(
       $.function_declaration,
       $.variable_declaration,
-      $.event_handler,
       $.mutex_declaration,
       $.shared_block
     ),
@@ -49,10 +48,10 @@ module.exports = grammar({
     mutex_declaration: $ => seq('mutex', field('name', $.identifier), ';'),
     shared_block: $ => seq('shared', '(', field('mutex', $.identifier), ')', $.block_statement),
 
-    event_handler: $ => seq(field('decorator', $.decorator), $.function_declaration),
     decorator: $ => seq('@', field('name', $.identifier)),
 
     function_declaration: $ => seq(
+      field('decorators', repeat($.decorator)),
       field('inline', optional('inline')),
       field('return_type', $._type_specifier),
       field('name', alias($.identifier, $.function_name)),

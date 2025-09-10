@@ -285,32 +285,6 @@
     }
   },
   {
-    "type": "event_handler",
-    "named": true,
-    "fields": {
-      "decorator": {
-        "multiple": false,
-        "required": true,
-        "types": [
-          {
-            "type": "decorator",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "function_declaration",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "expression_statement",
     "named": true,
     "fields": {},
@@ -371,6 +345,16 @@
         "types": [
           {
             "type": "block_statement",
+            "named": true
+          }
+        ]
+      },
+      "decorators": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "decorator",
             "named": true
           }
         ]
@@ -752,10 +736,6 @@
       "multiple": true,
       "required": false,
       "types": [
-        {
-          "type": "event_handler",
-          "named": true
-        },
         {
           "type": "function_declaration",
           "named": true

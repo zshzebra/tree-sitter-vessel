@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-vessel"
 description = "Programming language targeting Juno: New Origins"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Ryder Retzlaff <ryder@retzlaff.family>"]
 license = "MIT"
 readme = "README.md"

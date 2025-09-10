@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-vessel
 HOMEPAGE_URL := https://github.com/zshzebra/tree-sitter-vessel
-VERSION := 0.1.1
+VERSION := 0.1.2
 
 # repository
 SRC_DIR := src

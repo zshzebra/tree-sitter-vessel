@@ -23,10 +23,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "event_handler"
-        },
-        {
-          "type": "SYMBOL",
           "name": "mutex_declaration"
         },
         {
@@ -139,23 +135,6 @@
         }
       ]
     },
-    "event_handler": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "FIELD",
-          "name": "decorator",
-          "content": {
-            "type": "SYMBOL",
-            "name": "decorator"
-          }
-        },
-        {
-          "type": "SYMBOL",
-          "name": "function_declaration"
-        }
-      ]
-    },
     "decorator": {
       "type": "SEQ",
       "members": [
@@ -176,6 +155,17 @@
     "function_declaration": {
       "type": "SEQ",
       "members": [
+        {
+          "type": "FIELD",
+          "name": "decorators",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "decorator"
+            }
+          }
+        },
         {
           "type": "FIELD",
           "name": "inline",
