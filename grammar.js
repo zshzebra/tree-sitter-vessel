@@ -53,7 +53,7 @@ module.exports = grammar({
     decorator: $ => seq('@', field('name', $.identifier)),
 
     function_declaration: $ => seq(
-      optional('inline'),
+      field('inline', optional('inline')),
       field('return_type', $._type_specifier),
       field('name', alias($.identifier, $.function_name)),
       field('parameters', $.parameter_list),

@@ -13,7 +13,7 @@
 #define ALIAS_COUNT 5
 #define TOKEN_COUNT 36
 #define EXTERNAL_TOKEN_COUNT 0
-#define FIELD_COUNT 16
+#define FIELD_COUNT 17
 #define MAX_ALIAS_SEQUENCE_LENGTH 6
 #define MAX_RESERVED_WORD_SET_SIZE 0
 #define PRODUCTION_ID_COUNT 14
@@ -555,16 +555,17 @@ enum ts_field_identifiers {
   field_decorator = 4,
   field_field = 5,
   field_function = 6,
-  field_left = 7,
-  field_mutex = 8,
-  field_name = 9,
-  field_object = 10,
-  field_operator = 11,
-  field_parameters = 12,
-  field_return_type = 13,
-  field_right = 14,
-  field_type = 15,
-  field_value = 16,
+  field_inline = 7,
+  field_left = 8,
+  field_mutex = 9,
+  field_name = 10,
+  field_object = 11,
+  field_operator = 12,
+  field_parameters = 13,
+  field_return_type = 14,
+  field_right = 15,
+  field_type = 16,
+  field_value = 17,
 };
 
 static const char * const ts_field_names[] = {
@@ -575,6 +576,7 @@ static const char * const ts_field_names[] = {
   [field_decorator] = "decorator",
   [field_field] = "field",
   [field_function] = "function",
+  [field_inline] = "inline",
   [field_left] = "left",
   [field_mutex] = "mutex",
   [field_name] = "name",
@@ -592,14 +594,14 @@ static const TSMapSlice ts_field_map_slices[PRODUCTION_ID_COUNT] = {
   [3] = {.index = 1, .length = 1},
   [4] = {.index = 2, .length = 4},
   [5] = {.index = 6, .length = 1},
-  [6] = {.index = 7, .length = 4},
-  [7] = {.index = 11, .length = 2},
-  [8] = {.index = 13, .length = 3},
-  [9] = {.index = 16, .length = 2},
-  [10] = {.index = 18, .length = 2},
-  [11] = {.index = 20, .length = 3},
-  [12] = {.index = 23, .length = 3},
-  [13] = {.index = 26, .length = 2},
+  [6] = {.index = 7, .length = 5},
+  [7] = {.index = 12, .length = 2},
+  [8] = {.index = 14, .length = 3},
+  [9] = {.index = 17, .length = 2},
+  [10] = {.index = 19, .length = 2},
+  [11] = {.index = 21, .length = 3},
+  [12] = {.index = 24, .length = 3},
+  [13] = {.index = 27, .length = 2},
 };
 
 static const TSFieldMapEntry ts_field_map_entries[] = {
@@ -616,31 +618,32 @@ static const TSFieldMapEntry ts_field_map_entries[] = {
     {field_mutex, 2},
   [7] =
     {field_body, 4},
+    {field_inline, 0},
     {field_name, 2},
     {field_parameters, 3},
     {field_return_type, 1},
-  [11] =
+  [12] =
     {field_argument, 1},
     {field_operator, 0},
-  [13] =
+  [14] =
     {field_name, 1},
     {field_type, 0},
     {field_value, 3},
-  [16] =
+  [17] =
     {field_arguments, 1},
     {field_function, 0},
-  [18] =
+  [19] =
     {field_name, 1},
     {field_type, 0},
-  [20] =
+  [21] =
     {field_name, 2},
     {field_type, 1},
     {field_value, 4},
-  [23] =
+  [24] =
     {field_left, 0},
     {field_operator, 1},
     {field_right, 2},
-  [26] =
+  [27] =
     {field_field, 2},
     {field_object, 0},
 };

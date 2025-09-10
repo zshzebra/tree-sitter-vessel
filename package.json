@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-vessel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Programming language targeting Juno: New Origins",
   "repository": "https://github.com/zshzebra/tree-sitter-vessel",
   "license": "MIT",

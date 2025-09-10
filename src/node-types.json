@@ -375,6 +375,16 @@
           }
         ]
       },
+      "inline": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "inline",
+            "named": false
+          }
+        ]
+      },
       "name": {
         "multiple": false,
         "required": true,
